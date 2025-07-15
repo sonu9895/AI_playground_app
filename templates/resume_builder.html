@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="../static/css/resume_builder_style.css">
+</head>
+<body>
+  <h1>Welcome to Resume Builder</h1>
+  <div class="main-layout">
+    <!-- Input Section (Left) -->
+    <div class="input-section">
+      <div class="form-group">
+        <label for="pdfInput">Upload your Resume (PDF):</label>
+        <input type="file" id="pdfInput" accept=".pdf">
+      </div>
+
+      <div class="form-group">
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" placeholder="e.g. Google">
+      </div>
+
+      <div class="form-group">
+        <label for="position">Position:</label>
+        <input type="text" id="position" placeholder="e.g. Software Developer">
+      </div>
+
+      <div class="form-group">
+        <label for="jobDescription">Job Description:</label>
+        <textarea id="jobDescription" placeholder="Paste job description here..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="cvContent">CV Content(optional if resume is uploaded):</label>
+        <textarea id="cvContent" placeholder="Paste your CV content here..."></textarea>
+      </div>
+
+      <button class="button" onclick="generateResults()">Generate Cover Letter and CV Improvements</button>
+    </div>
+
+    <!-- Output Section (Right) -->
+    <div class="output-section">
+      <div class="form-group">
+        <label>Generated Cover Letter:</label>
+        <div id="coverLetter" class="output-box"></div>
+      </div>
+
+      <div class="form-group">
+        <label>CV Improvements:</label>
+        <div id="cvImprovements" class="output-box"></div>
+      </div>
+    </div>
+  </div>
+
+    <script src="../static/js/resume_builder.js"></script>
+</body>
+</html>
